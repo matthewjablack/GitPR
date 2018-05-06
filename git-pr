@@ -1,0 +1,5 @@
+#!/bin/bash
+repo=`git config --get remote.origin.url | cut -d':' -f 2 | cut -d'.' -f 1`
+branch=`git rev-parse --abbrev-ref HEAD`
+open -a /Applications/Google\ Chrome.app http://github.com/${repo}/compare/${branch}?expand=1
+
